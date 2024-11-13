@@ -1,0 +1,114 @@
+html, body {
+    height: 100%; /* Adjusted for better layout */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    background-color: #470439; /* Keep your existing background color */
+}
+
+.contact-container {
+    min-height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Ensure content aligns to the top */
+    flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+}
+
+.contact-form {
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 1rem; /* Adjust margin for mobile */
+    background-color: #d6d2fd;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Use full width on mobile */
+    max-width: 600px; /* Set a max-width for larger screens */
+    min-height: 250px; /* Adjust as needed for overall height */
+}
+
+.contact-image img {
+    width: 100%; /* Use full width on mobile */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
+.contact-form h2 {
+    color: #470439;
+    font-size: 2em; /* Keep original font size */
+    text-align: center;
+    margin: 6px; /* Keep original margin */
+}
+
+.social-media {
+    margin-top: 2%; /* Position 2% below the contact form */
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%; /* Ensure it spans across */
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.social-media li {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 40px; /* Keep original size for larger screens */
+    margin-right: 8px;
+    margin-bottom: -10px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #f7f0f5;
+    font-size: large;
+}
+
+/* Responsive styles */
+/* Responsive styles */
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items */
+    }
+
+    .contact-image {
+        order: 1; /* Image first */
+        margin-bottom: 20px; /* Space below the image */
+        width: 100%; /* Use full width on mobile */
+        text-align: center; /* Center the image */
+    }
+
+    .contact-form {
+        order: 2; /* Form second */
+        margin-left: 0; /* Remove left margin on smaller screens */
+        width: 90%; /* Adjust form width on smaller screens */
+        display: flex; /* Ensure it can be centered */
+        justify-content: center; /* Center the form */
+    }
+
+    .social-media {
+        order: 3; /* Social media links last */
+        flex-direction: column; /* Stack social media links */
+        align-items: center; /* Center align social media links */
+        margin-top: 20px; /* Space above social media */
+        width: 100%; /* Ensure it spans across */
+    }
+
+    .social-media ul {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center align links */
+        padding: 0; /* Remove padding */
+        width: 100%; /* Ensure it spans across */
+    }
+
+    .social-media li {
+        margin-bottom: 10px; /* Space between social media links */
+        text-align: center; /* Center align the text */
+    }
+}

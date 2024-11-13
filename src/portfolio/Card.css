@@ -1,0 +1,53 @@
+html, body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  height: 100%; /* Full height */
+}
+
+.about-me-container {
+  display: flex;
+  justify-content: center; /* Center the card horizontally */
+  align-items: center; /* Center the card vertically */
+  height: 100vh; /* Full viewport height */
+}
+
+.about-me-card {
+  display: flex;
+  flex-direction: row; /* Image on the right, content on the left */
+  align-items: center; /* Center items vertically */
+  margin: 20px; /* Space around the card */
+  padding: 20px; /* Padding inside the card */
+  border: 1px solid #ddd; /* Card border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #fff; /* White background for the card */
+  width: 80%; /* Card width */
+  position: relative; /* For positioning the image outside the card */
+  overflow: visible; /* Allow content to overflow outside the card */
+}
+
+.about-me-text {
+  flex: 1; /* Allow text to take remaining space */
+  margin-right: 20px; /* Space between text and image */
+}
+
+.about-me-text h2 {
+  margin: 0 0 10px; /* Space below the heading */
+}
+
+/* Styles for the image */
+#img {
+  width: 100%; /* Responsive width */
+  max-width: 200px; /* Set max width for image */
+  height: 130%; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for image */
+  position: absolute; /* Position outside the card */
+  right: -50px; /* Move image outside the card */
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect to move the image in view */
+#img:hover{
+  right: -30px; /* Move image closer to the card on hover */
+  transform: scale(1.1); /* Slightly enlarge the image */
+}

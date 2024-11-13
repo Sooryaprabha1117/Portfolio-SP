@@ -1,0 +1,120 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin-top: 180px;
+}
+
+.project-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 10%;
+  border: 8px solid;
+  border-image: linear-gradient(90deg, rgb(53, 1, 50) 0%, rgb(233, 14, 145) 37%, rgb(56, 3, 53) 75%, rgb(124, 12, 119) 85%);
+  border-image-slice: 1;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  opacity: 0;
+  animation: slideUp 0.6s ease forwards;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.image-container {
+  position: absolute;
+  height: 70%;
+  overflow: visible;
+  padding: 3%;
+}
+
+.project-image {
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+  width: 100%;
+  height: auto;
+}
+
+.content-container {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  padding: 20px;
+}
+
+.project-card:hover .project-image {
+  opacity: 0;
+}
+
+.project-card:hover .content-container {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-technologies {
+  margin-top: 10px;
+}
+
+.tech {
+  background: #eee;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px 10px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.tech:hover {
+  background-color: #d1c4e9;
+}
+
+.project-links {
+  margin-top: 15px;
+}
+
+.project-link {
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.project-link:hover {
+  transform: scale(1.05);
+}
+
+.demo-link::before {
+  content: '▶ ';
+  font-size: 14px;
+}
+
+.github-link::before {
+  content: '🌐 ';
+  font-size: 14px;
+}

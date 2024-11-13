@@ -1,0 +1,75 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center;
+    background-color: #0a0a0a;
+    padding: 10px 80px 10px 20px; /* Added right padding (40px) */
+    width: 100vw; /* Full width */
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* On top of other content */
+}
+
+#image {
+    width: 5%;
+    border-radius: 50%;
+    margin-left: 1rem; /* Adjust margin for spacing */
+    vertical-align: middle; /* Align image with text */
+}
+
+.navbar-list {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: flex-end; /* Push items to the right */
+    list-style: none;
+    margin: 0;
+    padding-right: 36px;
+    font-size: large;
+    font-weight: 900;
+}
+
+.navbar-item {
+    color: white;
+    cursor: pointer;
+padding-right: 30px;    
+position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    text-align: center; /* Center text within each item */
+}
+
+.navbar-item a {
+    color: inherit; /* Ensure link color inherits from parent */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.navbar-item::before {
+    content: '';
+    position: absolute;
+    width: 0; /* Start with width of 0 */
+    height: 2px;
+    bottom: 0;
+    left: 50%; /* Center the line initially */
+    background-color: #dda0dd; /* Light purple */
+    transition: width 0.15s ease-in-out, left 0.15s ease-in-out; /* Shorten transition time */
+    transform: translateX(-50%);
+}
+.navbar-item:hover::before {
+    width: 100%; /* Expand to full width of the text on hover */
+    left: -20%;
+    transform: translateX(-80%); /* Keep the underline centered */
+}
+
+.navbar-item:hover {
+    color: #dda0dd; /* Light purple hover effect for text */
+}
+
+.navbar-item.active::after {
+    content: '';
+    left: 0%;
+    right: 0;
+    height: 2px;
+    background-color: #dda0dd; /* Light purple */
+    transition: width 0.1s ease-in-out; /* Shorten transition time */
+}

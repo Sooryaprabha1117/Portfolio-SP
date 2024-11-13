@@ -1,0 +1,151 @@
+html, body {
+  min-height:100vh; /* Ensure the body takes the full height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #290025;
+  overflow: hidden; /* Prevent overflow and hide scrollbar */
+}
+
+.container {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-between; /* Space between text and swiper */
+  width: 100%; /* Ensure the container takes full width of the screen */
+  height: 100%; /* Full height of the screen */
+  box-sizing: border-box; /* Ensure padding does not affect the width */
+}
+
+.text-section {
+  width: 70%; /* 70% of the screen width for text */
+  text-align: center; /* Center the text */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  overflow: hidden; /* Prevent any text overflow */
+}
+
+
+.swiper img {
+  width: 100%; /* Image takes full width of swiper */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  border-radius: 29%;
+}
+.custom-apostrophe {
+  font-size: 398px; /* Large font size for prominence */
+  color: #ffff33; /* Neon yellow for contrast */
+  
+  font-family: 'Arial', sans-serif; /* Font family */
+  display: inline-block;
+  transform: rotate(-182deg); /* Rotate to resemble '6' */
+  border-radius: 70%; /* Perfect circle rounding */
+  margin-bottom: -30%;
+  margin-left: -65%;
+  overflow: hidden; /* To maintain clean, rounded edges */
+}
+
+h3, h1, h4 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Font family */
+  margin: 10px 0; /* Margin for spacing between elements */
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 65%; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: rgba(172, 163, 163, 0.24); }
+}
+
+@keyframes reset {
+  from { width: 65%; }
+  to { width: 0; }
+}
+
+#h1 {
+  font-weight: 900;
+  font-size: 68px; /* Font size for h1 */
+  margin: 0; /* Remove default margin */
+  color: #ff6f61; /* Text color */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow */
+  border-right: 3px solid rgba(83, 3, 43, 0.75); /* Cursor effect */
+  animation: typing 3.5s steps(40, end) infinite, blink 0.75s step-end infinite; /* Continuous animation */
+  
+  position: relative; /* Positioning for animation reset */
+}
+
+#h1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: reset 3.5s steps(40, end) infinite; /* Reset animation */
+  z-index: 1; /* Ensure reset covers text */
+}
+
+h3 {
+  margin-left: -420px; /* Remove default margin */
+  color: #66ff00 ;
+  
+    font-size: 30px;
+}
+
+h4 {
+  color: rgba(132, 250, 54, 0.979); /* Different color for h4 */
+  font-size: 20px;
+}
+.swiper-container {
+  width: 10%; /* Keep the original width */
+  display: flex;
+  justify-content: flex-end; /* Align swiper to the right */
+  margin-top: -70px; /* Reduce the space above the swiper */
+  overflow: hidden; /* Ensure no overflow for swiper container */
+}
+
+.swiper {
+  width: 100%; /* Full width of the swiper container */
+  height: 120%; /* Full height of the swiper container */
+  overflow: hidden; /* Hide overflow */
+  padding: 2px; /* Keep padding but adjust margin to reduce space */
+}
+/* Mobile responsive styles */
+@media (max-width: 900px) { /* Apply styles for screens smaller than 900px */
+  .container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center items */
+  }
+
+  .text-section {
+    width: 90%; /* Full width for text section on mobile */
+    margin-bottom: 20px; /* Space below text section */
+    text-align: center; /* Center align text */
+  }
+
+  .swiper-container {
+    width: 90%; /* Full width for swiper container on mobile */
+    margin-top: 20px; /* Space above swiper */
+    display: flex; /* Ensure flex behavior */
+    justify-content: center; /* Center align the swiper */
+  }
+
+  .swiper img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15%; /* Adjust border radius for a nicer look */
+  }
+}
+
+
+
+
+
