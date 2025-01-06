@@ -1,17 +1,23 @@
 html, body {
-    height: 100%; /* Adjusted for better layout */
+    height: 100%; /* Ensure the full height is used */
     margin: 0; /* Remove margin */
     padding: 0; /* Remove padding */
-    background-color: #470439; /* Keep your existing background color */
+    background-color: #470439; /* Existing background color */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
 }
 
 .contact-container {
-    min-height: 20vh;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Ensure content aligns to the top */
-    flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+    align-items: flex-start; /* Keep the content aligned at the top */
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px; /* Optional: Limit the width for better layout */
+    padding-top: 50px; /* Add top padding to avoid cut off at the top */
 }
+
 
 .contact-form {
     padding: 25px;
@@ -68,13 +74,17 @@ html, body {
     color: #f7f0f5;
     font-size: large;
 }
-
-/* Responsive styles */
 /* Responsive styles */
 @media (max-width: 900px) {
+    body {
+        padding-top: 80px; /* Add padding at the top to prevent the content from being cut off */
+    }
+
     .contact-container {
         flex-direction: column; /* Stack elements vertically */
-        align-items: center; /* Center items */
+        align-items: center; /* Center items horizontally */
+        padding-top: 70px; /* Ensure there's space at the top */
+        margin-top: 50px; /* Push content further down if necessary */
     }
 
     .contact-image {
@@ -86,8 +96,8 @@ html, body {
 
     .contact-form {
         order: 2; /* Form second */
-        margin-left: 0; /* Remove left margin on smaller screens */
-        width: 90%; /* Adjust form width on smaller screens */
+        margin-left: 2px; /* Remove left margin on smaller screens */
+        width: 86%; /* Adjust form width on smaller screens */
         display: flex; /* Ensure it can be centered */
         justify-content: center; /* Center the form */
     }
