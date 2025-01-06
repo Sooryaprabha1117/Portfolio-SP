@@ -1,7 +1,7 @@
 import React from 'react';
-import Resume from './portfolio/Assets/Resume_SP.pdf'; // Import the PDF file
+import Resume from './portfolio/Assets/SOORYA PRABHA.pdf'; // Import the PDF file
 import BackgroundImage from './portfolio/Assets/A12.png'; // Import the image
-import qrcode from "./portfolio/Assets/My_PDF.png"
+import qrcode from "./portfolio/Assets/qrcode.png";
 import "./ResumeP.css"
 const ResumePage = () => {
   // Function to handle resume download
@@ -25,7 +25,7 @@ const ResumePage = () => {
       backgroundRepeat: 'no-repeat', // Prevent repetition of the background
       backgroundPosition: 'left center', // Align background image to the left and center vertically
       marginTop: "1%",
-      minHeight: '100vh', // Ensure it covers the full height of the viewport
+      minHeight: '91vh', // Ensure it covers the full height of the viewport
       flexDirection: 'column', // Stack elements vertically
       alignItems: 'center', // Center items horizontally
       justifyContent: 'center', // Center items vertically
