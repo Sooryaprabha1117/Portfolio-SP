@@ -1,12 +1,6 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow-x: hidden;
-  margin-top: 180px;
-}
 
 .project-page {
+  margin-top: 700px;/*var(--header-height);*/ /* Push content below the navbar */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -14,8 +8,12 @@ html, body {
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
-  min-height: 100vh;
+  z-index: 1;
 }
+
+
+
+
 
 .project-card {
   background: #fff;
@@ -50,16 +48,16 @@ html, body {
 
 .image-container {
   position: absolute;
-  height: 70%;
-  overflow: visible;
-  padding: 3%;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: inherit;
 }
 
 .project-image {
-  object-fit: cover;
-  transition: opacity 0.3s ease;
   width: 100%;
   height: auto;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .content-container {
@@ -85,8 +83,8 @@ html, body {
 .tech {
   background: #eee;
   border-radius: 5px;
-  margin: 5px;
-  padding: 5px 10px;
+  margin: 2px;
+  padding: 2px 8px;
   display: inline-block;
   transition: background-color 0.3s ease;
 }
@@ -111,10 +109,10 @@ html, body {
 
 .demo-link::before {
   content: '▶ ';
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .github-link::before {
   content: '🌐 ';
-  font-size: 14px;
+  font-size: 12px;
 }
