@@ -1,9 +1,15 @@
 import React from 'react';
 import { Box, Card, CardContent, CardMedia, Typography, Button } from '@mui/material';
 import './Projects.css';
-import html5 from './Assets/html5.png';
-import cake from './Assets/cake4.png';
-import { InputBase } from '@mui/material';
+import html5 from './Assets/Projects/html5.png';
+import cake from './Assets/Projects/cake4.png';
+import Flip from './Assets/Projects/flip.png';
+import Thozhil from './Assets/Projects/thozhil.png';
+import NEWS from './Assets/Projects/news.png';
+import Filter from './Assets/Projects/filter.png';
+import Bill from './Assets/Projects/bill.png';
+import New from './Assets/Projects/2024.png';
+import Country from './Assets/Projects/country.png';
 
 const Projects = () => {
   const projects = [
@@ -23,7 +29,62 @@ const Projects = () => {
       demoLink: 'https://cake-corner-olive.vercel.app/',
       githubLink: 'https://github.com/username/cake-corner',
     },
-    // More projects...
+    {
+      title: 'New Year 2024',
+      description: 'A front-end for wishing a new year wish.',
+      technologies: ['HTML', 'CSS', 'Events'],
+      image: New,
+      demoLink: 'https://birthday-prjt.vercel.app/',
+      githubLink: 'https://github.com/Sooryaprabha1117/New-year',
+    },
+    {
+      title: 'Thozhil clone',
+      description: 'Built a clone website of Thozhil website achieving maximum features.',
+      technologies: ['React', 'Carousel', 'CSS'],
+      image: Thozhil,
+      demoLink: 'https://clone-phi-one.vercel.app/',
+      githubLink: 'https://github.com/Sooryaprabha1117/Clone',
+    },
+    {
+      title: 'Filter Image',
+      description: 'A front-end for applying filter to an image like contrast, brightness etc.',
+      technologies: ['React', 'Events', 'CSS'],
+      image: Filter,
+      demoLink: 'https://filter-image-dun.vercel.app/',
+      githubLink: 'https://github.com/Sooryaprabha1117/Filter-Image',
+    },
+    {
+      title: 'NEWS Website',
+      description: 'Built a NEWS Website that shows REAL TIME NEWS using API.',
+      technologies: ['React', 'CSS', 'Events', 'API'],
+      image: NEWS,
+      demoLink: 'https://news-flame-theta.vercel.app/',
+      githubLink: 'https://github.com/Sooryaprabha1117/NEWS',
+    },
+    {
+      title: 'Bill Payment',
+      description: 'Creating a website of Bill Payment for exhibition.',
+      technologies: ['React', 'CSS', 'Events'],
+      image: Bill,
+      demoLink: 'https://bill-payment-nine.vercel.app/',
+      githubLink: 'https://github.com/Sooryaprabha1117/BillPayment',
+    },
+    {
+      title: 'Flip Card',
+      description: 'Built a website using SaSS-CSS, a Flip Card.',
+      technologies: ['React', 'CSS', 'SaSS'],
+      image: Flip,
+      demoLink: 'https://drawitnow.vercel.app/',
+      githubLink: 'https://github.com/username/blockchain-healthcare',
+    },
+    {
+      title: 'Country Detail Revealer',
+      description: 'A project focused on revealing country information based on user selection.',
+      technologies: ['React', 'CSS', 'Events', 'API'],
+      image: Country,
+      demoLink: 'https://country-details-eta.vercel.app/',
+      githubLink: 'https://github.com/Sooryaprabha1117/Country-Details',
+    },
   ];
 
   return (
@@ -76,6 +137,26 @@ const Projects = () => {
           </CardContent>
         </Card>
       ))}
+
+      {/* Center-aligned Card at the Bottom */}
+      <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: '30px', marginBottom: '20px' }}>
+        <Card className="bottom-center-card">
+          <CardContent>
+            <Typography variant="h6">Click the button above to explore all projects</Typography>
+            <Box className="project-links" sx={{ display: 'flex', justifyContent: 'center' }}>
+              <Button
+                variant="contained"
+                color="secondary"
+                href="https://github.com/Sooryaprabha1117?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View
+              </Button>
+            </Box>
+          </CardContent>
+        </Card>
+      </Box>
     </Box>
   );
 };
