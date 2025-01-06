@@ -11,10 +11,10 @@ const Navbar = () => {
     };
 
     return (
-        <>
         <nav className="navbar">
-        <img id='image' src={myIma} alt="Logo" />
+            <img id="image" src={myIma} alt="Logo" />
 
+            {/* Navbar Links */}
             <ul className="navbar-list">
                 <li
                     className={`navbar-item ${activeLink === 'home' ? 'active' : ''}`}
@@ -29,10 +29,10 @@ const Navbar = () => {
                     <Link to="/about">About</Link>
                 </li>
                 <li
-                    className={`navbar-item ${activeLink === 'Projects' ? 'active' : ''}`}
-                    onClick={() => handleLinkClick('Projects')}
+                    className={`navbar-item ${activeLink === 'projects' ? 'active' : ''}`}
+                    onClick={() => handleLinkClick('projects')}
                 >
-                    <Link to="/Projects">Projects</Link>
+                    <Link to="/projects">Projects</Link>
                 </li>
                 <li
                     className={`navbar-item ${activeLink === 'contact' ? 'active' : ''}`}
@@ -48,7 +48,6 @@ const Navbar = () => {
                 </li>
             </ul>
         </nav>
-</>
     );
 };
 
