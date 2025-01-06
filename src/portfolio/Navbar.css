@@ -1,75 +1,70 @@
+/* Base Navbar Styles */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Space between logo and menu */
+    justify-content: space-between;
     align-items: center;
-    background-color: #0a0a0a;
-    padding: 10px 80px 10px 20px; /* Added right padding (40px) */
-    width: 100vw; /* Full width */
-    position: fixed; /* Fixed at the top */
+    background-color: #240127; /* Dark background for contrast */
+    padding: 6px 10px; /* Reduced padding to reduce height */
+    width: 100%; /* Ensure the navbar takes up full width */
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000; /* On top of other content */
+    z-index: 1000;
+    box-sizing: border-box; /* Prevents the navbar from exceeding the page */
 }
 
 #image {
-    width: 5%;
+    width: 40px; /* Adjusted logo size */
+    height: 40px;
     border-radius: 50%;
-    margin-left: 1rem; /* Adjust margin for spacing */
-    vertical-align: middle; /* Align image with text */
 }
 
+/* Navbar Links */
 .navbar-list {
     display: flex;
-    align-items: center; /* Center items vertically */
-    justify-content: flex-end; /* Push items to the right */
+    align-items: center;
     list-style: none;
     margin: 0;
-    padding-right: 36px;
-    font-size: large;
-    font-weight: 900;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0;
 }
 
 .navbar-item {
     color: white;
     cursor: pointer;
-padding-right: 30px;    
-position: relative;
-    overflow: hidden;
+    padding: 10px 15px;
+    position: relative;
     transition: color 0.3s ease;
-    text-align: center; /* Center text within each item */
 }
 
 .navbar-item a {
-    color: inherit; /* Ensure link color inherits from parent */
-    text-decoration: none; /* Remove underline from links */
+    color: inherit;
+    text-decoration: none;
 }
 
-.navbar-item::before {
-    content: '';
-    position: absolute;
-    width: 0; /* Start with width of 0 */
-    height: 2px;
-    bottom: 0;
-    left: 50%; /* Center the line initially */
-    background-color: #dda0dd; /* Light purple */
-    transition: width 0.15s ease-in-out, left 0.15s ease-in-out; /* Shorten transition time */
-    transform: translateX(-50%);
-}
-.navbar-item:hover::before {
-    width: 100%; /* Expand to full width of the text on hover */
-    left: -20%;
-    transform: translateX(-80%); /* Keep the underline centered */
-}
-
+/* Hover Effect for Navbar Items */
 .navbar-item:hover {
-    color: #dda0dd; /* Light purple hover effect for text */
+    color: #ffa500; /* Change text color on hover */
 }
 
-.navbar-item.active::after {
-    content: '';
-    left: 0%;
-    right: 0;
-    height: 2px;
-    background-color: #dda0dd; /* Light purple */
-    transition: width 0.1s ease-in-out; /* Shorten transition time */
+/* Mobile View */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 5px 10px; /* Further reduce padding on smaller screens */
+    }
+
+    #image {
+        width: 35px; /* Slightly smaller logo on mobile */
+        height: 35px;
+    }
+
+    .navbar-list {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-item {
+        font-size: 0.5rem; /* Reduce font size on mobile */
+    }
 }
